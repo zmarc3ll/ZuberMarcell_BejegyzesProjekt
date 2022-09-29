@@ -8,6 +8,8 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.util.Objects.isNull;
+
 public class Main {
     private static List<Bejegyzes> bejegyzesek1 = new ArrayList<>();
     private static List<Bejegyzes> bejegyzesek2 = new ArrayList<>();
@@ -50,6 +52,7 @@ public class Main {
         String egySzoveg=sc.nextLine();
         //bejegyzesek1[1].szoveg=egySzoveg;
 
+
     }
     private static void bejegyzesFajlbol(String fajlNev) throws IOException {
         FileReader fr = new FileReader(fajlNev);
@@ -63,5 +66,36 @@ public class Main {
         }
         br.close();
         fr.close();
+
+        for (Bejegyzes b2 : bejegyzesek1){
+            System.out.println(b2);
+        }
+        int legtobbLike = 0;
+        for (Bejegyzes b : bejegyzesek1){
+            if (b.getLikeok() > legtobbLike){
+                legtobbLike = b.getLikeok();
+            }
+        }
+        System.out.println("A legtöbb like: " + legtobbLike);
+
+        Bejegyzes tobbMint35 = null;
+        for (Bejegyzes b : bejegyzesek1){
+            if (b.getLikeok() > 35){
+                tobbMint35 = b;
+            }
+        }
+        System.out.println(isNull(tobbMint35) ? "Nincs olyan bejegyzés, mely több, mint 35 likeot kapott"
+                : tobbMint35);
+
+        int kevesebbMint15 = 0;
+        for (Bejegyzes b : bejegyzesek1){
+            if (b.getLikeok() < 15){
+                kevesebbMint15++;
+            }
+        }
+        System.out.println(kevesebbMint15 + " bejegyzés kapott kevesebb, mint 15 likeot");
+
+
+
     }
 }
