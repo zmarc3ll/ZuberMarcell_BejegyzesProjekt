@@ -42,4 +42,13 @@ public class Bejegyzes {
         this.tartalom = tartalom;
         this.szerkesztve = LocalDateTime.now();
     }
+
+    public void like(){
+        this.likeok=this.likeok+1;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
