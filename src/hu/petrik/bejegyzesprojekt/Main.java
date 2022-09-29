@@ -3,10 +3,7 @@ package hu.petrik.bejegyzesprojekt;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static java.util.Objects.isNull;
 
@@ -42,15 +39,21 @@ public class Main {
             bejegyzesek1.add(b);
         }
         bejegyzesFajlbol("bejegyzesek.csv");
+        sc.close();
 
-        double likeokSzama=Math.random()*bejegyzesek1.size();
-        for (int i = 0; i < bejegyzesek1.size()*20; i++) {
-           //bejegyzesek1[likeokSzama].likeok.like;
+        Random rnd=new Random();
+
+        int likeokSzama;
+        for (int i = 0; i < bejegyzesek1.stream().count()*20; i++) {
+            likeokSzama = rnd.nextInt((int)bejegyzesek1.stream().count());
+            bejegyzesek1.get(likeokSzama).like();
         }
 
+        Scanner scc = new Scanner(System.in);
         System.out.println("Adjon meg egy szöveget: ");
-        String egySzoveg=sc.nextLine();
-        //bejegyzesek1[1].szoveg=egySzoveg;
+        String bekertSzoveg = scc.nextLine();
+        bejegyzesek1.get(1).setTartalom(bekertSzoveg);
+        scc.close();
 
 
     }
