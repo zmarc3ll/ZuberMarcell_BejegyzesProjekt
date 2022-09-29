@@ -46,6 +46,10 @@ public class Main {
            //bejegyzesek1[likeokSzama].likeok.like;
         }
 
+        System.out.println("Adjon meg egy szöveget: ");
+        String egySzoveg=sc.nextLine();
+        //bejegyzesek1[1].szoveg=egySzoveg;
+
     }
     private static void bejegyzesFajlbol(String fajlNev) throws IOException {
         FileReader fr = new FileReader(fajlNev);

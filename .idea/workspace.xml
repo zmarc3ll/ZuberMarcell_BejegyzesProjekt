@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca9d20d-1c7e-47fc-9eba-4a48a34cfbf9" name="Changes" comment="beolvasás és csv felvétele">
+    <list default="true" id="9ca9d20d-1c7e-47fc-9eba-4a48a34cfbf9" name="Changes" comment="likeok szamanak növelése">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/petrik/bejegyzesprojekt/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/petrik/bejegyzesprojekt/Main.java" afterDir="false" />
     </list>
@@ -106,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664440403984</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="likeok szamanak növelése">
+      <created>1664441530900</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664441530900</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +134,7 @@
     <MESSAGE value="tostring megírása" />
     <MESSAGE value="bejegyzés hozzáadása" />
     <MESSAGE value="beolvasás és csv felvétele" />
-    <option name="LAST_COMMIT_MESSAGE" value="beolvasás és csv felvétele" />
+    <MESSAGE value="likeok szamanak növelése" />
+    <option name="LAST_COMMIT_MESSAGE" value="likeok szamanak növelése" />
   </component>
 </project>
