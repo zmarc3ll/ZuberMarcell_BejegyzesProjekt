@@ -49,6 +49,15 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
-        return super.toString();
+        if (this.szerkesztve!=this.letrejott){
+
+            return String.format(this.szerzo+" - "+this.likeok+" - "+this.letrejott+"\n"+
+                    "Szerkesztve: " + this.szerkesztve +"\n"+
+                    this.tartalom);
+        } else {
+            return String.format(this.szerzo+" - "+this.likeok+" - "+this.letrejott+"\n"+
+                    "Szerkesztve: " + "\n"+
+                    this.tartalom);
+        }
     }
 }
